@@ -11,6 +11,7 @@ Timing timerContador;
 
 int  state = 0;
 int temperaturaAmbiente = 27; // Temperatura desejada para o ambiente
+int toleranciaDeTemperatura = 2; // Faixa que a temperatura não será alterada
 boolean sinalAutomatico = true;
 int contador;
 
@@ -85,9 +86,9 @@ void loop() {
     if (minutosDeEsperaParaVerificar.onTimeout(tempoEsperaVerificacao)){
  
       // O +1 serve pra quando estiver na faixa de temperatura escolhida ele não mudar
-      if (dht.readTemperature() > temperaturaAmbiente + 1) {
+      if (dht.readTemperature() > temperaturaAmbiente + toleranciaDeTemperatura) {
         Serial.println("Sensor deve abaixar mais a temperatura!");
-      } else if (dht.readTemperature() < temperaturaAmbiente) {
+      } else if (dht.readTemperature() < temperaturaAmbiente - toleranciaDeTemperatura) {
         Serial.println("Sensor deve aumentar mais a temperatura!");
       }
     }
