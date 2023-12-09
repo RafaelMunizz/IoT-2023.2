@@ -1,7 +1,7 @@
 #include <DHT.h>; //INCLUSÃO DE BIBLIOTECA
 #include <Timing.h>
 
-#define DHTPIN 7 //PINO DIGITAL UTILIZADO PELO DHT22
+#define DHTPIN 8 //PINO DIGITAL UTILIZADO PELO DHT22
 #define DHTTYPE DHT22 //DEFINE O MODELO DO SENSOR (DHT22 / AM2302)
 #define tempoEsperaVerificacao 300000
 
@@ -17,7 +17,7 @@ int contador;
 
 void setup()
 {
-  Serial.begin(9600);  
+  Serial.begin(38400);  
   Serial.println("O bluetooth está ativo. Conecte-se ao HC-05 a partir de qualquer outro dispositivo Bluetooth com 1234 como chave de emparelhamento!");
   dht.begin(); //INICIALIZA A FUNÇÃO
   contador = tempoEsperaVerificacao/1000;
