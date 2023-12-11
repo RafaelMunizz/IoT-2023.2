@@ -1,9 +1,9 @@
 # IoT-2023.2
 Repositório para a disciplina de IoT em 2023.2 do IFPB  <br /> 
 
-Professor: Alexandre Vasconcelos <br /> 
+👨‍🏫 Professor: Alexandre Vasconcelos <br /> 
 
-Grupo 5:   
+🧑‍🎓 Grupo 5:   
           Bráulio Matheus  <br /> 
           Ialy Sousa  <br /> 
           Jorge Victor  <br /> 
