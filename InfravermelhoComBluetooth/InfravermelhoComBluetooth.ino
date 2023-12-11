@@ -5,6 +5,8 @@ int state = 0;     // Entrada de dados recebida
 IRsend irsend;
 decode_results results;
 
+// MAC ESP: CC:DB:A7:5B:B2:B2  
+
 IRrecv irrecv(RECV_PIN);
 
 void ircode(decode_results *results);
@@ -39,7 +41,7 @@ void loop() {
   // Leitura se o bluetooth está recebendo dados
   if (Serial.available() > 0) {
     state = Serial.read();  // Ler o dado na porta serial
-    //Serial.println(state);
+    Serial.println(state);
   }
 
   // Leitura se o receptor infra está recebendo dados
